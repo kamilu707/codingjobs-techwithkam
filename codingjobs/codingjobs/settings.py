@@ -28,6 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+LOGIN_URL = 'login'
+LOGOUT_REDIRECT_URL = 'frontpage'
+LOGIN_REDIRECT_URL = 'frontpage'
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
