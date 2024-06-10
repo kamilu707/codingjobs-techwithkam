@@ -3,17 +3,13 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
 from django.contrib.auth import logout
+from apps.job.models import Job
 
-# from django.contrib.auth.views import LogoutView
-
-# def logout(request):
-#     if request.method == 'POST':
-#         return LogoutView.as_view(next_page='login')
-#     else:
-#         return render(request, 'user_auth/coreapp/logout.html')
 
 def frontpage(request):
-    return render(request, 'coreapp/frontpage.html')
+    jobs = Job.objects.all()[0:3]
+
+    return render(request, 'coreapp/frontpage.html',{'jobs':jobs})
 
 def signup(request):
     if request.method == 'POST':
