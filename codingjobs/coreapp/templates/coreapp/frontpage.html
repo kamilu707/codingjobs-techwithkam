@@ -18,6 +18,10 @@
 
                     <div class="content">
                     {{ job.short_description }}
+                    <hr>
+
+                    <a href="{% url 'job_detail' job.id %}">View</a>
+                    
                     </div>
                 </div>
             </div>
