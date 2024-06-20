@@ -32,7 +32,7 @@ def signup(request):
 
            login(request, user)
            
-           return redirect('frontpage')
+           return redirect('dashboard')
 
     else:
         form = UserCreationForm()
