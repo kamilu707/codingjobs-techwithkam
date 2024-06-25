@@ -33,7 +33,6 @@ LOGOUT_REDIRECT_URL = 'frontpage'
 LOGIN_REDIRECT_URL = 'frontpage'
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,6 +45,7 @@ INSTALLED_APPS = [
     'coreapp',
     'apps.job',
     'apps.userprofile',
+    'apps.notification',
 
 ]
 
@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.notification.context_processors.notifications',
             ],
         },
     },
