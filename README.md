@@ -7,7 +7,7 @@ This project is created by Django and django from CWS youtube channel. And this 
 Continue the course at:
 https://www.youtube.com/watch?v=C8pYT1R8yo4&list=PLpyspNLjzwBkV1Lo2CSKLFtzG3PUNTG8q&index=8
 
-- Video 8 min  0:00
+- Video 8 min  18:25 / 24:27
 
 
 
