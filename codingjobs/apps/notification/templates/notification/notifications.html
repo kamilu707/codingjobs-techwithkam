@@ -1,6 +1,7 @@
 {% extends "coreapp/base.html" %}
 
 {% block content %}
+<div class="container">
     <h1 class="title">{{ job.short_description }}</p>
     
         {% if not notifications %}
@@ -11,15 +12,20 @@
         <div class="notification">
             <p>
                 {% if notification.notification_type == 'message' %}
-                    <a href="{% url 'notifications' %}?goto=viewapplication&notification{{ notification.extra_id }}">
+                    <a href="{% url 'notifications' %}?goto=viewapplication&notification={{ notification.id }}&extra_id={{notification.extra_id}}">
                         <strong>{{ notification.created_by.username }}</strong> Sent you a message <br>
                         <small> {{ notification.created_at|timesince }} ago</small>
                     </a>
-                {{% elif notification.notification_type == 'application' %}}
-                <a href="{% url 'notifications' %}?goto=viewapplication&notification{{ notification.extra_id }}">
+                {% elif notification.notification_type == 'application' %}
+                <a href="{% url 'notifications' %}?goto=viewapplication&notification={{notification.id}}&extra_id={{notification.extra_id}}">
                     <strong>{{ notification.created_by.username }}</strong>applied for you job!<br>
                     <small> {{ notification.created_at|timesince }} ago</small>
                 </a>
                 {% endif %}
+            </p>
+        </div>
+
 {% endfor %}
     </div>
+
+{% endblock %}

@@ -8,5 +8,4 @@ urlpatterns = [
     path('view_application/<int:application_id>/', view_application, name='view_application'),
     path('view_dashboard_job/<int:job_id>/', view_dashboard_job, name='view_dashboard_job'),
     
-
 ]

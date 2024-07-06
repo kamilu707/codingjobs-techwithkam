@@ -11,6 +11,7 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('admin/', admin.site.urls),
     path('dashboard/',include('apps.userprofile.urls')),
+    path('notifications/', include('apps.notification.urls')),
     path('jobs/', include('apps.job.urls'))
 
 ]

@@ -47,7 +47,6 @@ def apply_for_job(request, job_id):
 
             create_notification(request, job.created_by, 'application', extra_id=application.id)
 
-
             return redirect('dashboard')
 
     else:

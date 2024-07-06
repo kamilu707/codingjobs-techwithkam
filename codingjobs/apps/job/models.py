@@ -6,6 +6,8 @@ class Job(models.Model):
     short_description = models.TextField()
     long_description = models.TextField(blank=True, null=True)
 
+    company_name = models.CharField(max_length=255)
+    
     created_by = models.ForeignKey(User, related_name='jobs', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     changed_at = models.DateTimeField(auto_now=True)
@@ -21,5 +23,4 @@ class Application(models.Model):
 
     created_by = models.ForeignKey(User, related_name='applications', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-
 
